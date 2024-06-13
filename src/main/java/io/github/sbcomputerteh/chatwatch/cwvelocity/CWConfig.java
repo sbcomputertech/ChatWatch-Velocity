@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class CWConfig {
     public static CWConfig load(Path dataDir) {
@@ -36,10 +37,12 @@ public class CWConfig {
     private CWConfig() {
         serverAddress = "127.0.0.1";
         serverPort = 8080;
+        ingestToken = new UUID(0, 0);
         messageCommands = List.of("msg", "tell", "w");
     }
 
     public String serverAddress;
     public int serverPort;
+    public UUID ingestToken;
     public List<String> messageCommands;
 }

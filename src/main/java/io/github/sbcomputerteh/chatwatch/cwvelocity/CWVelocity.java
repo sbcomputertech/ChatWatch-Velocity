@@ -149,7 +149,7 @@ public class CWVelocity {
                     config.serverAddress,
                     config.serverPort,
                     uriPath,
-                    null,
+                    "IngestToken=" + config.ingestToken.toString(),
                     null);
         } catch (URISyntaxException e) {
             logger.error("Invalid IP and/or port specified in config!");

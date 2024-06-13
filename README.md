@@ -13,6 +13,7 @@ If there is no config file present, the plugin will create one by default. It lo
 {
   "serverAddress": "127.0.0.1",
   "serverPort": 8080,
+  "ingestToken": "00000000-0000-0000-0000-000000000000",
   "messageCommands": [
     "msg",
     "tell",
@@ -21,4 +22,5 @@ If there is no config file present, the plugin will create one by default. It lo
 }
 ```
 
-`messageCommands` denotes commands used to send private messages, and should be commands used in the format `/command targetplayer message`
+- `messageCommands` denotes commands used to send private messages, and should be commands used in the format `/command targetplayer message`
+- `ingestToken` is a G/UUID that is used like an API key to submit messages to the server. **This must match the token specified in the server config!**
